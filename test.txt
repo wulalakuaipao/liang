@@ -1,1 +1,14 @@
 XXXX
+git status -s
+git add .
+如果你觉得 git add 提交缓存的流程太过繁琐，Git 也允许你用 -a 选项跳过这一步。命令格式如下：
+git commit -a
+git status : 查看当前仓库中文件的状态。
+git status -s : 文件状态的简写（M - 修改， A - 添加， D - 删除， R - 重命名，?? - 未追踪）。
+git add <文件名> ：将后方紧跟的文件进行暂存，以便commit使用。
+git reset HEAD <文件名> : 将已经暂存的文件进行撤销，回到未暂存的状态。
+git checkout -- <文件名> ：撤销对尚未暂存文件的修改，该操作不可逆，慎用。
+git commit -a : 对那些被修改的文件单尚未暂存和提交的文件进行暂存和提交。注意：对未暂存的新增文件无效。
+git commit : 对暂存区的文件进行提交到本地仓库。
+git push : 将本地仓库已经提交的内容发布到远端。
+
